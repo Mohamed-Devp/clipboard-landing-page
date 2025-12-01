@@ -94,6 +94,10 @@ ul {
   list-style-type: none;
 }
 
+svg, img {
+  display: block;
+}
+
 /*============================================
   UTILITY STYLES
   ============================================*/
@@ -145,6 +149,15 @@ ul {
   font-weight: var(--font-weight-semibold);
   color: hsl(var(--white));
   cursor: pointer;
+}
+
+.download-btns button:hover, .download-btns button:focus {
+  opacity: 0.8;
+}
+
+.download-btns button:active {
+  transform: translateY(0.125rem);
+  box-shadow: initial;
 }
 
 .download-btns .ios {
@@ -288,9 +301,28 @@ footer {
   color: hsl(var(--gray-700));
 }
 
+.nav-link a:hover, .nav-link a:focus {
+  color: hsl(var(--green-500));
+}
+
 .social-links {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
   margin-left: auto;
+}
+
+.social-link svg {
+  display: block;
+  fill: hsl(var(--gray-700));
+}
+
+.social-link a:hover svg, .social-link a:focus svg {
+  fill: hsl(var(--green-500));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .download-btns button, .nav-link a, .social-link svg {
+    transition: 0.2s ease-in;
+  }
 }
