@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  /* Colors */
+  --blue-100: 233 100% 69%;
+  --blue-200: 233 65% 59%;
+  --green-500: 171 66% 44%;
+  --green-600: 171 64% 38%;
+
+  --white: 0 0 100%; 
+  --gray-100: 220 18% 97%;
+  --gray-500: 201 11% 66%;
+  --gray-700: 210 10% 33%;
+
+  /* Typography */
+  --font-family-primary: "Bai Jamjuree";
+
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  /* Spacing */
+  --spacing-0: 0.875rem;
+  --spacing-1: 1rem;
+  --spacing-2: 2rem;
+  --spacing-3: 3rem;
+  --spacing-4: 4rem;
+  --spacing-5: 5rem;
+  --spacing-6: 6rem;
+  --spacing-7: 8rem;
+  --spacing-8: 10rem;
+}
+
+/*============================================
+  RESET & BASE STYLES
+  ============================================*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family-primary);
+}
+
+h1, h2, h3 {
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--gray-700));
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: var(--spacing-1);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  color: hsl(var(--gray-500));
+}
+
+h1 + p {
+  font-size: var(--font-size-lg);
+}
+
+h2 + p {
+  font-size: var(--font-size-md);
+}
+
+h3 + p {
+  font-size: var(--font-size-sm);
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*============================================
+  UTILITY STYLES
+  ============================================*/
+.sm {
+  width: 22rem;
+}
+
+.lg {
+  width: 42rem;
+}
+
+.sr-only {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*============================================
+  HERO SECTION
+  ============================================*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-7) 0;
+  text-align: center;
+  background-image: url("./images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+.hero h1 {
+  margin-top: var(--spacing-4);
+}
+
+.download-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-3);
+}
+
+.download-btns button {
+  padding: var(--spacing-0) var(--spacing-2);
+  border: initial;
+  border-radius: 8rem;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: hsl(var(--white));
+  cursor: pointer;
+}
+
+.download-btns .ios {
+  background-color: hsl(var(--green-500));
+  box-shadow: 0 0.125rem hsl(var(--green-600)), 0 0.75rem 1rem hsl(var(--green-500) / 0.2);
+}
+
+.download-btns .mac {
+  background-color: hsl(var(--blue-100));
+  box-shadow: 0 0.125rem hsl(var(--blue-200)), 0 0.75rem 1rem hsl(var(--blue-100) / 0.2);
+}
+
+/*============================================
+  FEATURES SECTION
+  ============================================*/
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: var(--spacing-4);
+  text-align: center;
+}
+
+.features-list {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-5);
+  text-align: initial;
+}
+
+.features-list img {
+  width: 50rem;
+  height: auto;
+  transform: translateX(-5%);
+}
+
+.feature + .feature {
+  margin-top: var(--spacing-4);
+}
+
+/*============================================
+  ACCESSIBILITY SECTION
+  ============================================*/
+.accessibility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-4) 0;
+  text-align: center;
+}
+
+.accessibility img {
+  margin-top: var(--spacing-5);
+}
+
+/*============================================
+  TOOLS SECTION
+  ============================================*/
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-2) 0 var(--spacing-4) 0;
+  text-align: center;
+}
+
+.tools-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tool h3 {
+  margin-top: var(--spacing-3);
+}
+
+/*============================================
+  SPONSORS SECTION
+  ============================================*/
+.sponsors {
+  padding: var(--spacing-6) 0;
+}
+
+.sponsors-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+/*============================================
+  DOWNLOAD SECTION
+  ============================================*/
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-4) 0 var(--spacing-8) 0;
+  text-align: center;
+}
+
+/*============================================
+  LANDING PAGE FOOTER
+  ============================================*/
+footer {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-7);
+  background-color: hsl(var(--gray-100));
+}
+
+.logo {
+  width: 3.75rem;
+  height: auto;
+}
+
+.nav-links {
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-template-areas: 
+    "a c e" 
+    "b d .";
+  gap: var(--spacing-1) var(--spacing-6);
+  margin-left: var(--spacing-7);
+}
+
+.nav-link a {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  text-decoration: initial;
+  color: hsl(var(--gray-700));
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-left: auto;
+}
