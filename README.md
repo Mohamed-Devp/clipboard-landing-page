@@ -6,7 +6,6 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -21,14 +20,10 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
-- Solution URL: [here!](https://your-solution-url.com)
-- Live Site URL: [here!](https://your-live-site-url.com)
+- Solution URL: [here!](https://www.frontendmentor.io/solutions/accessible-and-responsive-clipboard-landing-page-Z856OxHhv6)
+- Live Site URL: [here!](https://mohamed-devp.github.io/clipboard-landing-page/)
 
 ## My process
 
@@ -38,10 +33,6 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ## Author
 
