@@ -144,7 +144,6 @@ svg, img {
 
 .download-btns {
   display: flex;
-  flex-wrap: wrap;
   gap: var(--spacing-1);
   margin-top: var(--spacing-3);
 }
@@ -239,10 +238,12 @@ svg, img {
 
 .tools-list {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: var(--spacing-2);
   margin-top: var(--spacing-4);
+  padding: 0 var(--spacing-3);
 }
 
 .tool {
@@ -264,7 +265,7 @@ svg, img {
   SPONSORS SECTION
   ============================================*/
 .sponsors {
-  padding: var(--spacing-6) 0;
+  padding: var(--spacing-6) var(--spacing-3);
 }
 
 .sponsors-list {
@@ -302,7 +303,7 @@ footer {
 }
 
 footer .logo {
-  width: clamp(2.5rem, 4.25vw, 5.5rem);
+  width: clamp(2.75rem, 4.25vw, 5.5rem);
   height: auto;
 }
 
@@ -347,5 +348,83 @@ footer .logo {
 @media (prefers-reduced-motion: no-preference) {
   .download-btns button, .nav-link a, .social-link svg {
     transition: 0.2s ease-in;
+  }
+}
+
+@media (max-width: 54rem) {
+  h1, h2 {
+    padding: 0 var(--spacing-3);
+  }
+
+  .sm {
+    width: min(16rem, 80vw);
+  }
+
+  .lg {
+    width: min(32rem, 80vw);
+  }
+
+  .features-list {
+    flex-direction: column;
+    gap: var(--spacing-5);
+    text-align: inherit;
+  }
+
+  .features-list img {
+    width: min(32rem, 80vw);
+    transform: initial;
+  }
+
+  .features-list ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+    padding: 0 var(--spacing-3);
+  }
+
+  .feature + .feature {
+    margin-top: 0;
+  }
+
+  .accessibility img {
+    width: min(32rem, 80vw);
+  }
+
+  .tools-list {
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-5);
+  }
+
+  footer {
+    flex-direction: column;
+    gap: var(--spacing-3);
+    padding: var(--spacing-3) 0;
+  }
+
+  .nav-links {
+    grid-template-areas: "a" "b" "c" "d" "e";
+    gap: var(--spacing-1);
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .social-links {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 28rem) {
+  .hero {
+    background-image: url("./images/bg-header-mobile.png");
+  }
+
+  .download-btns {
+    flex-direction: column;  
+  }
+
+  .download-btns button {
+    width: 80vw;
   }
 }
